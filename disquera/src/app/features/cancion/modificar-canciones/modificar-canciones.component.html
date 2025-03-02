@@ -1,0 +1,55 @@
+<nav>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/cantantes']">Lista de Cantantes</a>
+    <a [routerLink]="['/canciones']">Lista de Canciones</a>
+    <a [routerLink]="['/agregarCanciones']">Subir Canción</a>
+</nav>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Formulario para editar Cancion</h1>
+
+    <div *ngIf="cancion" class="form-container">
+
+        <form [formGroup]="formularioCancion" (ngSubmit)="actualizarCancion()">
+
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título de la cancion:</label>
+                <input id="titulo" type="text" class="form-control" formControlName="titulo">
+                <div *ngIf="formularioCancion.get('titulo')?.invalid" class="text-danger">
+                    <p>El título debe tener al menos 3 caracteres.</p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="duracion" class="form-label">Duracion:</label>
+                <input id="duracion" type="number" class="form-control" formControlName="duracion">
+                <div *ngIf="formularioCancion.get('duracion')?.invalid" class="text-danger">
+                    <p>La duración debe ser mayor o igual a 10.</p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="genero" class="form-label">Genero:</label>
+                <input id="genero" type="text" class="form-control" formControlName="genero">
+                <div *ngIf="formularioCancion.get('genero')?.invalid" class="text-danger">
+                    <p>El género debe tener al menos 3 caracteres.</p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="cantante" class="form-label">Cantante</label>
+                <select id="cantante" class="form-control" formControlName="cantante_id">
+                    <option *ngFor="let cantante of cantanteList" [value]="cantante.id">
+                        {{ cantante.nombre }}
+                    </option>
+                </select>
+                <div *ngIf="formularioCancion.get('cantante_id')?.invalid" class="text-danger">
+                    <p>Debes seleccionar un cantante.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" [disabled]="formularioCancion.invalid" type="submit">Editar Cancion</button>
+
+        </form>
+    </div>
+</div>

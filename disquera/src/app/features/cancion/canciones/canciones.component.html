@@ -1,0 +1,44 @@
+<nav>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/cantantes']">Lista de Cantantes</a>
+    <a [routerLink]="['/canciones']">Lista de Canciones</a>
+    <a [routerLink]="['/agregarCanciones']">Subir Canción</a>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="text-center">Lista de Canciones</h1>
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Duracion</th>
+                        <th>Genero</th>
+                        <th>Cantante</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla-Cancion">
+                    <tr *ngFor="let cancion of cancionesFiltradas">
+                        <td>{{ cancion.titulo }}</td>
+                        <td>{{ cancion.duracion }}</td>
+                        <td>{{ cancion.genero }}</td>
+                        <td>{{ cantantesList.at(cancion.cantante_id - 1)?.nombre }}</td>
+                        <td>
+                            <button class="btn btn-warning ms-2" [routerLink]="['/modificarCanciones/', cancion.id]">Editar</button>
+                            <button (click)="eliminarCancion(cancion)" class="btn btn-danger ms-2">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="fw-bold" for="cantanteSelect">Filtrar por cantantes</label>
+            <select class="form-control" id="cantanteSelect" [(ngModel)]="cantanteSeleccionado" (change)="filtrarCanciones()">
+                <option value="0">Todos los cantantes</option>
+                <option *ngFor="let cantante of cantantesList" [value]="cantante.id">{{ cantante.nombre }}</option>
+            </select>
+        </div>
+    </div>
+</div>

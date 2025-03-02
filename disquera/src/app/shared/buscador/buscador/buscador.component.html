@@ -1,0 +1,31 @@
+<nav>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/cantantes']">Lista de Cantantes</a>
+    <a [routerLink]="['/canciones']">Lista de Canciones</a>
+    <a [routerLink]="['/agregarCanciones']">Subir Canción</a>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">DISQUERA</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card text-center shadow-lg p-3 mb-5 rounded">
+                <div class="card-body">
+                    <h3 class="card-title">Cantantes</h3>
+                    <p class="card-text">Administra y visualiza la lista de cantantes.</p>
+                    <a [routerLink]="['/cantantes']" class="btn btn-primary">Listado de Cantantes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center shadow-lg p-3 mb-5 rounded">
+                <div class="card-body">
+                    <h3 class="card-title">Canciones</h3>
+                    <p class="card-text">Administra y visualiza la lista de canciones.</p>
+                    <a [routerLink]="['/canciones']" class="btn btn-primary mb-2">Listado de Canciones</a>
+                    <a [routerLink]="['/agregarCanciones']" class="btn btn-success">Subir Nueva Canción</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+{
+  "cantantes": [
+    {
+      "id": "1",
+      "nombre": "Cruz Cafune",
+      "generos": [
+        "trap",
+        "rap"
+      ],
+      "canciones": [
+        "Turbo",
+        "Ja Morant"
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Hoke",
+      "generos": [
+        "rap",
+        "drill"
+      ],
+      "canciones": [
+        "Aimbot"
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "Delaossa",
+      "generos": [
+        "flamenco"
+      ],
+      "canciones": [
+        "Veneno"
+      ]
+    }
+  ]
+}

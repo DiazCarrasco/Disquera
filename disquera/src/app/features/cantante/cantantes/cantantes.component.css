@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    animation: slideIn 1s ease-in-out;
+}
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #000000;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+h2 {
+    font-size: 2rem;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+.table {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.table th, .table td {
+    color: #ffcc00;
+    font-size: 1.3rem;
+    padding: 15px;
+}
+.table th {
+    background-color: #302b63;
+    text-align: center;
+}
+.table td {
+    background-color: #24243e;
+    text-align: center;
+}
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+nav a {
+    color: #ffcc00;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #e6b800;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

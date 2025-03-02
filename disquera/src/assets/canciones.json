@@ -1,0 +1,32 @@
+{
+  "canciones": [
+    {
+      "titulo": "Turbo",
+      "duracion": 96,
+      "genero": "rap",
+      "cantante_id": "1",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "Epifania",
+      "duracion": 40,
+      "genero": "trap",
+      "cantante_id": "1"
+    },
+    {
+      "id": "3",
+      "titulo": "Aimbot",
+      "duracion": 80,
+      "genero": "trap",
+      "cantante_id": "2"
+    },
+    {
+      "titulo": "Veneno",
+      "duracion": 120,
+      "genero": "flamenco",
+      "cantante_id": "3",
+      "id": "4"
+    }
+  ]
+}
