@@ -1,0 +1,9 @@
+Para iniciar el proyectoDisquera:
+
+	1. Le damos click derecho a la carpeta disquera y abrimos los puertos para los servicios
+		1- Para cantantes sera el puerto 3000: json-server --watch src/assets/cantantes.json --port 3000
+		2- Para cantantes sera el puerto 3000: json-server --watch src/assets/canciones.json --port 3001
+		
+	2. Instalamos npm e iniciamos el servidor
+		1- npm install
+		2- ng serve
